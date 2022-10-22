@@ -2,6 +2,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown')
+const path = require('path')
 // TODO: Create an array of questions for user input
 const questions = ([
     {
@@ -54,14 +55,14 @@ const questions = ([
 
 //TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    fs.writeFileSync(fileName, data, err => err ? console.error(err) : console.log('Success'))
+    fs.writeFileSync(path.join(__dirname, fileName), data, err => err ? console.error(err) : console.log('Success'))
 }
 
 // TODO: Create a function to initialize app
 function init() {
         inquirer.prompt(questions).then((response) => {
         console.log('Generating README...');
-        writeToFile('GeneratedREADME.md', generateMarkdown({...response}));
+        writeToFile('GeneratedREADME.md', generateMarkdown(response));
     });
  }
 
