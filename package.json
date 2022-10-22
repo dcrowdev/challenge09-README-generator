@@ -1,0 +1,27 @@
+{
+  "name": "readme-generator",
+  "version": "1.0.0",
+  "description": "Bootcamp challenge 09, readme generator.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dylan Crowley",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dcrowdev/challenge09-README-generator.git"
+  },
+  "keywords": [
+    "node",
+    "readme",
+    "generator"
+  ],
+  "bugs": {
+    "url": "https://github.com/dcrowdev/challenge09-README-generator/issues"
+  },
+  "homepage": "https://github.com/dcrowdev/challenge09-README-generator#readme"
+}
