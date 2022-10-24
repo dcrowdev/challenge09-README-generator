@@ -9,8 +9,13 @@ function renderLicenseBadge(license) {
 }
 
 // // TODO: Create a function that returns the license link
-// // If there is no license, return an empty string
-// function renderLicenseLink(license) {}
+// If there is no license, return an empty string
+function renderLicenseLink(license) {
+if (license === 'None') {
+return '';
+}
+return `[${license}](https://opensource.org/licenses/${license.replaceAll(' ', '-')})`;
+}
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
@@ -25,7 +30,7 @@ This project does not have a license.
     return `
 ## License
 
-This project was created using the ${license} license.
+This project was created using the ${renderLicenseLink(license)} license.
 `
   }
 }
